@@ -1,0 +1,31 @@
+{
+  "name": "cercle-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.20.1",
+    "autoprefixer": "^8.6.5",
+    "bootstrap": "^4.1.1",
+    "css-mqpacker": "^6.0.2",
+    "cssnano": "^4.0.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.2",
+    "popper.js": "^1.14.3",
+    "postcss-fixes": "^2.0.1",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "webpack-notifier": "^1.6.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ios >= 8"
+  ],
+  "scripts": {
+    "dev-server": "encore dev-server",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production --progress"
+  }
+}

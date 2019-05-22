@@ -8,6 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+require_once get_template_directory() . '/includes/assets.php';
+
 /*
  * Set up theme support
  */
@@ -54,13 +56,8 @@ add_action( 'after_setup_theme', 'hello_elementor_setup' );
  */
 if ( ! function_exists( 'hello_elementor_scripts_styles' ) ) {
 	function hello_elementor_scripts_styles() {
-		$hook_result = apply_filters_deprecated( 'elementor_hello_theme_enqueue_style', [ true ], '2.0', 'hello_elementor_enqueue_style' );
-		if ( apply_filters( 'hello_elementor_enqueue_style', $hook_result ) ) {
-			wp_enqueue_style(
-				'cercle-des-heros',
-				get_template_directory_uri() . '/style.css'
-			);
-		}
+		wp_enqueue_style('cercle-des-heros', asset_path('css/app.css'));
+		wp_enqueue_script('cercle-des-heros', asset_path('js/app.js'));
 	}
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_scripts_styles' );

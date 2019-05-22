@@ -2,3 +2,5 @@
 /plugins/index.php
 /themes/index.php
 /upgrade/
+/build/
+/themes/*/node_modules/
