@@ -1,1 +1,9 @@
 import './white-logo.png';
+import './linkedin.png';
+import './twitter.png';
+import './vimeo.png';
+import './googleplus.png';
+import './youtube.png';
+import './instagram.png';
+import './facebook.png';
+import './ss-design.png';

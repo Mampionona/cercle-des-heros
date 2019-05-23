@@ -24,7 +24,7 @@ class Onepage_WalkerOverride extends Walker_Nav_menu
 	    if (($disable_item != true) && ($post_object->ID != $current_page_id)) {
 	    	$output .= $indent . '<li ' . $value . $class_names.' data-hash="' . $post_object->post_name . '">';
 
-	    	if ( $separate_page == true )
+	    	if ( $separate_page)
 	        $attributes .= ! empty( $item->url ) ? ' href="'   . esc_attr( $item->url ) .'" class="no-scroll"' : '';
 	      else {
         	if (is_front_page()) $attributes .= ' href="#' . $post_object->post_name . '"';
