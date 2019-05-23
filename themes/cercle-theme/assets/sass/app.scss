@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Trirong&display=swap');
-// font-family: 'Trirong', serif;
-// font-family: 'Montserrat', sans-serif;
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,500i,600,700,800|Trirong:700i&display=swap');
+@import 'variables';
 @import '~bootstrap/scss/bootstrap';
+@import 'typo';
+@import 'layout/footer';
