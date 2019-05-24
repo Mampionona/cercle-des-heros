@@ -7,3 +7,4 @@ import './youtube.png';
 import './instagram.png';
 import './facebook.png';
 import './ss-design.png';
+import './bars.png';

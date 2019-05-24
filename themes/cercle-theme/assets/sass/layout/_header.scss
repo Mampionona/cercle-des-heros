@@ -1,0 +1,25 @@
+.site-header {
+  padding-top: 66px;
+}
+
+.language-switcher {
+  &,
+  a {
+    color: $secondary;
+    font: {
+      family: 'Trirong', serif;
+      size: 20px;
+      style: italic;
+      weight: 700;
+    }
+  }
+
+  li {
+    &:not(:first-of-type) {
+      &::before {
+        content: '/';
+        margin: 0 4px;
+      }
+    }
+  }
+}
