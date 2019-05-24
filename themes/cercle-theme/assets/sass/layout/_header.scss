@@ -1,10 +1,15 @@
 .site-header {
+  left: 0;
   padding-top: 66px;
+  position: absolute;
+  top: 0;
 }
 
 .menu-toggler {
   background: url('../images/bars.png') no-repeat left center;
+  border: 0;
   height: 24px;
+  outline: 0;
   width: 34px;
 }
 
@@ -17,7 +22,6 @@
     position: fixed;
     top: 0;
     transition: background-color .2s;
-    width: 100%;
     z-index: 9;
   }
 

@@ -1,10 +1,10 @@
 <?php if (!defined( 'ABSPATH')) exit; ?>
-<header id="site-header" class="site-header" role="banner">
+<header id="site-header" class="site-header w-100" role="banner">
 	<div class="wrap">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col">
-					<button class="menu-toggler btn pl-0" id="navbar-toggler"></button>
+					<button class="menu-toggler pl-0" id="navbar-toggler"></button>
 				</div>
 				<div class="col-auto">
 					<div class="logo">

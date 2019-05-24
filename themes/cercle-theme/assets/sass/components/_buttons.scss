@@ -1,6 +1,24 @@
 .btn {
+  border-radius: 32px;
+  font: {
+    size: 20px;
+    style: italic;
+    weight: 500;
+  }
+  padding: 11px 35px;
+
   &:focus,
   &.focus {
     box-shadow: none;
+  }
+
+  &.btn-outline {
+    border: 3px solid $white;
+  }
+}
+
+button {
+  &:focus {
+    outline: 0;
   }
 }
