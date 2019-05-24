@@ -1,12 +1,10 @@
 <?php if (!defined( 'ABSPATH')) exit; ?>
-<header id="site-header" class="site-header bg-dark" role="banner">
+<header id="site-header" class="site-header" role="banner">
 	<div class="wrap">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col">
-					<button class="menu-toggler btn pl-0">
-						<img src="<?php echo asset_path('images/bars.png'); ?>" alt="burger">
-					</button>
+					<button class="menu-toggler btn pl-0" id="navbar-toggler"></button>
 				</div>
 				<div class="col-auto">
 					<div class="logo">
