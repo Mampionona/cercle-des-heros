@@ -117,6 +117,14 @@
 // offres
 .offres {
   margin-top: 146px;
+
+  .row {
+    @include make-row(56px);
+  }
+
+  .offre-item {
+    @include make-col-ready(56px);
+  }
 }
 
 .offre-item {
