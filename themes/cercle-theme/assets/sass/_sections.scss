@@ -13,6 +13,11 @@
   .section-title {
     color: $primary;
     margin-bottom: 88px;
+    margin-left: -60px;
+
+    @media (min-width: 1600px) {
+      margin-left: -139px;
+    }
   }
 
   .wp-block-quote {
