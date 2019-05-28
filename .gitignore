@@ -1,3 +1,3 @@
 /upgrade
-/themes/cercle-des-heros/build
-/themes/cercle-des-heros/node_modules
+/themes/*/build/
+/themes/*/node_modules/
