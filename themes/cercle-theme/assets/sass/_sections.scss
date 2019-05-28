@@ -41,6 +41,8 @@
     color: $primary;
     font-size: 25px;
     line-height: 35px;
+    padding-bottom: 202px;
+    padding-top: 200px;
   }
 
   .icon-item {
@@ -142,10 +144,6 @@
 // Expertise
 .notre-expertise {
   .content {
-    h3 {
-      margin-bottom: 62px;
-    }
-
     .wp-block-quote {
       p {
         font-weight: 600;
@@ -178,6 +176,32 @@
         width: 100%;
         z-index: -1;
       }
+    }
+  }
+}
+
+// Vision
+.notre-vision {
+  .content {
+    background: {
+      position: right bottom;
+      repeat: no-repeat;
+      size: contain;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+  }
+}
+
+.notre-expertise,
+.notre-vision {
+  .content {
+    h3 {
+      margin-bottom: 62px;
     }
   }
 }

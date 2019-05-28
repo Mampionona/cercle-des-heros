@@ -5,7 +5,13 @@ $backgroundImage = get_field('background_image');
 
 <div class="content--vision">
   <div class="content text-white" style="background-image: url(<?php echo $backgroundImage['url']; ?>)">
-    <?php echo $post->post_content; ?>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <?php echo $post->post_content; ?>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="icons">
     <div class="d-flex justify-content-center flex-column flex-lg-row">
