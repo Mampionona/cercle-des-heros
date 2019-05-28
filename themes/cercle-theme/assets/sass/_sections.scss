@@ -12,6 +12,7 @@
 
   .section-title {
     color: $primary;
+    margin-bottom: 88px;
   }
 
   .wp-block-quote {
@@ -108,5 +109,75 @@
 .notre-equipe {
   p {
     font-weight: 300;
+  }
+}
+
+// offres
+.offres {
+  margin-top: 146px;
+}
+
+.offre-item {
+  .name {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .subtitle {
+    font-weight: 500;
+    margin-bottom: 48px;
+  }
+
+  figure {
+    margin-bottom: 54px;
+  }
+
+  .description {
+    font-weight: 500;
+  }
+}
+
+// Expertise
+.notre-expertise {
+  .content {
+    h3 {
+      margin-bottom: 62px;
+    }
+
+    .wp-block-quote {
+      p {
+        font-weight: 600;
+      }
+    }
+
+    p {
+      font-weight: 300;
+    }
+
+    ul {
+      @include list-unstyled;
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 47px;
+      margin-top: 53px;
+    }
+
+    .bg {
+      padding: 0 11px;
+      position: relative;
+
+      &::after {
+        background: $primary;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
   }
 }

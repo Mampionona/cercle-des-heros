@@ -6,7 +6,7 @@ import './core';
 (function (w, d, undefined) {
   d.addEventListener('DOMContentLoaded', () => {
     new Glide('.glide', {
-      autoplay: false,
+      autoplay: 4000,
       animationDuration: 1000,
       type: 'carousel',
       perView: 5,
@@ -21,5 +21,12 @@ import './core';
       }
     })
     .mount();
+
+    d.querySelectorAll('.list-background').forEach((list) => (
+      list.querySelectorAll('li').forEach((item) => {
+        const span = `<span class="bg">${item.innerHTML}</span>`;
+        item.innerHTML = span;
+      })
+    ));
   });
 } (window, document));
