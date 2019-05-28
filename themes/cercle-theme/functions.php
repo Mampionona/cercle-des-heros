@@ -121,4 +121,6 @@ function wpdocs_theme_setup() {
   // add_image_size( 'category-thumb', 300 );
   add_image_size('vision-thumb', 2242, 732, true);
   add_image_size('expertise-thumb', 2242, 682, true);
+  add_image_size('offre-thumb', 517, 285, true);
+  add_image_size('equipe-thumb', 386, 423, true);
 }

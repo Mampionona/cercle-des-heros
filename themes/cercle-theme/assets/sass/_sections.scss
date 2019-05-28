@@ -14,9 +14,14 @@
   }
 
   .icons {
+    background-color: $white;
     color: $primary;
     font-size: 25px;
     line-height: 35px;
+  }
+
+  .icon-item {
+    width: 417px;
   }
 
   .icon {

@@ -8,10 +8,10 @@ $backgroundImage = get_field('background_image');
     <?php echo $post->post_content; ?>
   </div>
   <div class="icons">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center flex-column flex-lg-row">
       <?php foreach ($icons as $icon) : ?>
         <?php if (!$icon['active']) continue; ?>
-        <div class="text-center">
+        <div class="icon-item text-center">
           <div class="d-inline-block">
             <div class="icon d-flex align-items-center justify-content-center">
               <img src="<?php echo wp_get_attachment_url($icon['icon']); ?>" alt>
