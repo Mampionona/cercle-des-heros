@@ -115,3 +115,10 @@ function widgets_init() {
 }
 
 add_action('widgets_init', 'widgets_init');
+
+add_action('after_setup_theme', 'wpdocs_theme_setup');
+function wpdocs_theme_setup() {
+  // add_image_size( 'category-thumb', 300 );
+  add_image_size('vision-thumb', 2242, 732, true);
+  add_image_size('expertise-thumb', 2242, 682, true);
+}
