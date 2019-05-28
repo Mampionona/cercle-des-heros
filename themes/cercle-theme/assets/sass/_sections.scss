@@ -119,11 +119,11 @@
   margin-top: 146px;
 
   .row {
-    @include make-row(56px);
+    @include make-row($offres-gutter-width);
   }
 
   .offre-item {
-    @include make-col-ready(56px);
+    @include make-col-ready($offres-gutter-width);
   }
 }
 
