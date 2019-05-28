@@ -3,8 +3,30 @@
     background-color: $secondary;
   }
 
+  &.notre-equipe {
+    .section-title {
+      margin-bottom: 180px;
+      text-transform: none;
+    }
+  }
+
   .section-title {
     color: $primary;
+  }
+
+  .wp-block-quote {
+    margin-bottom: 35px;
+
+    &,
+    p {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 40px;
+    }
+  }
+
+  .equipe {
+    margin-top: 143px;
   }
 }
 
@@ -30,5 +52,61 @@
     height: 165px;
     margin-bottom: 50px;
     width: 165px;
+  }
+}
+
+.equipe-item {
+  .text {
+    padding-left: 60px;
+  }
+
+  .name {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 32px;
+    margin-top: 65px;
+  }
+
+  .about {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+  }
+}
+
+.glide__slide {
+  .text {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: .3s;
+  }
+
+  img {
+    transition: .2s;
+  }
+
+  &.glide__slide--active,
+  &:hover {
+    .text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.equipe {
+  .glide__slides {
+    padding-top: 14px;
+  }
+}
+
+.notre-equipe {
+  p {
+    font-weight: 300;
   }
 }

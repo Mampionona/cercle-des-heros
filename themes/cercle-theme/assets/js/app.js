@@ -6,7 +6,7 @@ import './core';
 (function (w, d, undefined) {
   d.addEventListener('DOMContentLoaded', () => {
     new Glide('.glide', {
-      autoplay: 4000,
+      autoplay: false,
       animationDuration: 1000,
       type: 'carousel',
       perView: 5,

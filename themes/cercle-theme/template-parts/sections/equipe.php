@@ -15,11 +15,15 @@
           <ul class="glide__slides">
             <?php foreach ($equipes as $equipe) : ?>
               <li class="glide__slide">
-                <figure>
-                  <?php echo wp_get_attachment_image($equipe['equipe_photo'], 'equipe-thumb', false, array('class' => 'img-fluid')); ?>
-                </figure>
-                <h4 class="text-primary"><?php echo $equipe['name']; ?></h4>
-                <p><?php echo nl2br($equipe['about']); ?></p>
+                <div class="equipe-item">
+                  <figure>
+                    <?php echo wp_get_attachment_image($equipe['equipe_photo'], 'equipe-thumb', false, array('class' => 'img-fluid')); ?>
+                  </figure>
+                  <div class="text">
+                    <h4 class="name text-primary"><?php echo $equipe['name']; ?></h4>
+                    <p class="about mb-0"><?php echo nl2br($equipe['about']); ?></p>
+                  </div>
+                </div>
               </li>
             <?php endforeach; ?>
           </ul>
