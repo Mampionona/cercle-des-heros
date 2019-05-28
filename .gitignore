@@ -1,6 +1,3 @@
-/index.php
-/plugins/index.php
-/themes/index.php
 /upgrade
-/themes/*/build
-/themes/*/node_modules
+/themes/cercle-des-heros/build
+/themes/cercle-des-heros/node_modules
