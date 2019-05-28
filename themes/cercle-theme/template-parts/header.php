@@ -1,7 +1,7 @@
 <?php if (!defined( 'ABSPATH')) exit; ?>
 <header id="site-header" class="site-header w-100" role="banner">
 	<div class="wrap">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row align-items-center">
 				<div class="col">
 					<button class="menu-toggler pl-0" id="navbar-toggler"></button>

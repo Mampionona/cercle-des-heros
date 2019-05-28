@@ -3,6 +3,12 @@
   padding-top: 66px;
   position: absolute;
   top: 0;
+
+  .container-fluid {
+    @media (min-width: 1400px) {
+      width: calc(100% - (140px * 2));
+    }
+  }
 }
 
 .menu-toggler {
