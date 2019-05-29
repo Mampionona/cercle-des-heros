@@ -16,7 +16,13 @@ import './core';
         386: { perView: 1 }
       }
     })
-    .mount();
+      .mount();
+
+    new Glide('.expert-slider.glide', {
+      type: 'carousel',
+      perView: 1
+    })
+      .mount();
 
     d.querySelectorAll('.list-background').forEach((list) => (
       list.querySelectorAll('li').forEach((item) => {

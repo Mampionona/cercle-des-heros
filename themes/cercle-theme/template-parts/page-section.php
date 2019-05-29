@@ -1,6 +1,7 @@
 <?php
 global $post;
 $postName = $post->post_name;
+$backgroundImage = get_field('background_image');
 $template = get_field('template');
 if (!$template) {
   $template = 'default';
@@ -8,6 +9,9 @@ if (!$template) {
 ?>
 
 <section class="section-item <?php echo $postName; ?>" id="<?php echo $postName; ?>">
+  <?php if ($template === 'champions') : ?>
+    <div class="bg position-absolute w-100" style="background-image: url(<?php echo $backgroundImage['url']; ?>)"></div>
+  <?php endif; ?>
   <div class="page-header">
     <div class="container">
       <div class="row">

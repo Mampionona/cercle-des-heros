@@ -10,6 +10,32 @@
     }
   }
 
+  &.nos-champions-et-experts {
+    padding-top: 244px;
+    position: relative;
+
+    .section-title {
+      margin-bottom: 140px;
+    }
+
+    .bg {
+      background: {
+        color: #0b1338;
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+      }
+      height: 1081px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &.notre-expertise,
+  &.nos-offres {
+    padding-top: 196px;
+  }
+
   .section-title {
     color: $primary;
     margin-bottom: 88px;
@@ -223,5 +249,55 @@
     h3 {
       margin-bottom: 62px;
     }
+  }
+}
+
+// Experts
+.expert-item {
+  .name {
+    font: {
+      family: 'Trirong', sans-serif;
+      size: 60px;
+      style: italic;
+      weight: 700;
+    }
+    line-height: 65px;
+    margin-bottom: 64px;
+  }
+
+  .about {
+    font: {
+      size: 25px;
+      weight: 300;
+    }
+    line-height: 35px;
+  }
+
+  .photo {
+    margin-top: 30px;
+  }
+
+  .col-photo,
+  .col-text {
+    @include make-col-ready($gutter: $grid-gutter-width);
+  }
+
+  @include media-breakpoint-up(lg) {
+    $photo-width: 674px;
+    $col-photo-width: percentage(($photo-width + $grid-gutter-width) / ($content-width + $grid-gutter-width));
+
+    .col-photo {
+      width: $col-photo-width;
+    }
+
+    .col-text {
+      width: 100% - $col-photo-width;
+    }
+  }
+}
+
+.nos-champions-et-experts {
+  .content {
+    margin-top: 75px;
   }
 }
