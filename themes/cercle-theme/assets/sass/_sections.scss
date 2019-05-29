@@ -13,10 +13,22 @@
   .section-title {
     color: $primary;
     margin-bottom: 88px;
-    margin-left: -60px;
+    position: relative;
 
     @media (min-width: 1600px) {
-      margin-left: -139px;
+      left: -139px;
+    }
+
+    .line {
+      border-top: 1px solid $primary;
+      display: block;
+      position: absolute;
+      top: 17px;
+      width: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: 0;
     }
   }
 

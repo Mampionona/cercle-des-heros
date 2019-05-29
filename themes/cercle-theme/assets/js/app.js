@@ -1,5 +1,5 @@
+import './polyfill';
 import Glide from '@glidejs/glide';
-// import 'bootstrap';
 import '../images';
 import './core';
 
@@ -12,12 +12,8 @@ import './core';
       perView: 5,
       gap: 0,
       breakpoints: {
-        991: {
-          perView: 2
-        },
-        386: {
-          perView: 1
-        }
+        991: { perView: 2 },
+        386: { perView: 1 }
       }
     })
     .mount();
@@ -28,5 +24,16 @@ import './core';
         item.innerHTML = span;
       })
     ));
+
+    const update = (title) => {
+      const span = title.querySelector('.line');
+      const position = title.getBoundingClientRect();
+      const positionLeft = position.left;
+      span.style.left = `-${positionLeft}px`;
+      span.style.width = `${positionLeft - 15}px`;
+    };
+    const positionOfLine = () => d.querySelectorAll('.section-title').forEach(update);
+    positionOfLine();
+    w.addEventListener('resize', positionOfLine);
   });
 } (window, document));
