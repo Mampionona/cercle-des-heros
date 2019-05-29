@@ -76,10 +76,6 @@
 }
 
 .equipe-item {
-  .text {
-    padding-left: 60px;
-  }
-
   .name {
     font-size: 30px;
     font-weight: 600;
@@ -93,10 +89,9 @@
     font-weight: 300;
     line-height: 25px;
   }
-}
 
-.glide__slide {
   .text {
+    padding-left: 60px;
     opacity: 0;
     transform: translateY(-20px);
     transition: .3s;
@@ -106,7 +101,7 @@
     transition: .2s;
   }
 
-  &.glide__slide--active,
+  .glide__slide--active &,
   &:hover {
     .text {
       opacity: 1;

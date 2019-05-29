@@ -5,7 +5,7 @@ import './core';
 
 (function (w, d, undefined) {
   d.addEventListener('DOMContentLoaded', () => {
-    new Glide('.glide', {
+    new Glide('.glide.equipe-slider', {
       autoplay: 4000,
       animationDuration: 1000,
       type: 'carousel',
