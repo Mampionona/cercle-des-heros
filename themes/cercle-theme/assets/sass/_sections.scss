@@ -301,3 +301,27 @@
     margin-top: 75px;
   }
 }
+
+.expert-slider {
+  .glide__arrow {
+    border: 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    .glide__arrow--right {
+      right: -93px;
+    }
+
+    .glide__arrow--left {
+      left: -93px;
+    }
+  }
+}
+
+.first .glide__arrow--left {
+  visibility: hidden;
+}
+
+.last .glide__arrow--right {
+  visibility: hidden;
+}

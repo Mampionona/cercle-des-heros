@@ -9,3 +9,5 @@ import './facebook.png';
 import './ss-design.png';
 import './bars.png';
 import './scroll-down.png';
+import './prev.png';
+import './next.png';
