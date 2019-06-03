@@ -6,6 +6,7 @@
       <div class="row">
         <div class="col list-background">
           <?php echo $post->post_content; ?>
+          <?php get_template_part('template-parts/learn', 'more'); ?>
         </div>
       </div>
     </div>

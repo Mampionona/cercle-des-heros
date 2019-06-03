@@ -5,7 +5,7 @@
     style: italic;
     weight: 500;
   }
-  padding: 11px 35px;
+  padding: 16px 35px;
 
   &:focus,
   &.focus {
@@ -14,6 +14,12 @@
 
   &.btn-outline {
     border: 3px solid $white;
+    padding-bottom: 14px;
+    padding-top: 14px;
+  }
+
+  &.btn-secondary {
+    box-shadow: 4.086px 8.019px 7px 0px rgba(222, 222, 222, 0.9);
   }
 }
 

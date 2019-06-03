@@ -22,7 +22,7 @@
                 <?php echo wp_get_attachment_image($offre['photo'], 'offre-thumb', false, array('class' => 'img-fluid')); ?>
               </figure>
               <p class="description"><?php echo $offre['offer_description']; ?></p>
-              <div class="reserve">
+              <div class="reserver">
                 <a href="#" class="btn btn-secondary"><?php _e('Réserver', 'cercle-des-heros'); ?></a>
               </div>
             </div>

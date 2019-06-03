@@ -1,16 +1,31 @@
 .section-item {
-  &.notre-vision {
-    background-color: $secondary;
+  .content {
+    background: {
+      position: right bottom;
+      repeat: no-repeat;
+      size: percentage(1086 / 1920);
+    }
   }
 
-  &.notre-equipe {
+  &.section--vision {
+    background-color: $secondary;
+    padding-top: 176px;
+
+    .content {
+      background-size: percentage(1383 / 1920);
+    }
+  }
+
+  &.section--equipe {
+    padding-top: 219px;
+
     .section-title {
       margin-bottom: 180px;
       text-transform: none;
     }
   }
 
-  &.nos-champions-et-experts {
+  &.section--champions {
     padding-top: 244px;
     position: relative;
 
@@ -31,8 +46,8 @@
     }
   }
 
-  &.notre-expertise,
-  &.nos-offres {
+  &.section--expertise,
+  &.section--offres {
     padding-top: 196px;
   }
 
@@ -146,7 +161,7 @@
   }
 }
 
-.notre-equipe {
+.section--equipe {
   p {
     font-weight: 300;
   }
@@ -162,6 +177,7 @@
 
   .offre-item {
     @include make-col-ready($offres-gutter-width);
+    padding-bottom: 64px;
   }
 }
 
@@ -184,11 +200,12 @@
 
   .description {
     font-weight: 500;
+    margin-bottom: 56px;
   }
 }
 
 // Expertise
-.notre-expertise {
+.section--expertise {
   .content {
     .wp-block-quote {
       p {
@@ -224,16 +241,20 @@
       }
     }
   }
+
+  .learn-more {
+    margin-top: 90px;
+  }
+
+  .post-thumbnail {
+    margin-top: 212px;
+  }
 }
 
 // Vision
-.notre-vision {
+.section--vision {
   .content {
-    background: {
-      position: right bottom;
-      repeat: no-repeat;
-      size: contain;
-    }
+    padding-bottom: 337px;
   }
 
   p {
@@ -241,10 +262,14 @@
     font-weight: 500;
     line-height: 27px;
   }
+
+  .learn-more {
+    margin-top: 53px;
+  }
 }
 
-.notre-expertise,
-.notre-vision {
+.section--expertise,
+.section--vision {
   .content {
     h3 {
       margin-bottom: 62px;
@@ -296,7 +321,9 @@
   }
 }
 
-.nos-champions-et-experts {
+.section--champions {
+  margin-top: 188px;
+
   .content {
     margin-top: 75px;
   }
@@ -324,4 +351,23 @@
 
 .last .glide__arrow--right {
   visibility: hidden;
+}
+
+.white-btn {
+  .btn {
+    background-color: $white;
+    box-shadow: 4.086px 8.019px 7px 0px rgba($secondary, 0.9);
+    border: 0;
+    color: $secondary;
+  }
+}
+
+.section--offres {
+  .reserver {
+    bottom: 0;
+    left: 0;
+    padding: 0 28px;
+    position: absolute;
+    width: 100%;
+  }
 }

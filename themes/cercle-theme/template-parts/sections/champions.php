@@ -1,6 +1,6 @@
 <?php $experts = get_post_meta($post->ID, 'experts', true); ?>
 
-<div class="section--champions">
+<div class="section---champions">
   <div class="container">
     <div class="row">
       <div class="col">

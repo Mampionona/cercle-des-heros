@@ -8,7 +8,7 @@ if (!$template) {
 }
 ?>
 
-<section class="section-item <?php echo $postName; ?>" id="<?php echo $postName; ?>">
+<section class="section-item section--<?php echo $template; ?> <?php echo $postName; ?>" id="<?php echo $postName; ?>">
   <?php if ($template === 'champions') : ?>
     <div class="bg position-absolute w-100" style="background-image: url(<?php echo $backgroundImage['url']; ?>)"></div>
   <?php endif; ?>
@@ -24,5 +24,5 @@ if (!$template) {
       </div>
     </div>
   </div>
-  <?php include(locate_template("template-parts/sections/{$template}.php")); ?>
+  <?php include(locate_template("template-parts/sections/{$template}.php", false, false)); ?>
 </section>
