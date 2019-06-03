@@ -17,7 +17,7 @@ $backgroundImage = get_field('background_image');
     </div>
   </div>
   <div class="icons">
-    <div class="d-flex justify-content-center flex-column flex-lg-row">
+    <div class="d-flex justify-content-center flex-column flex-lg-row align-items-center align-items-lg-center">
       <?php foreach ($icons as $icon) : ?>
         <?php if (!$icon['active']) continue; ?>
         <div class="icon-item text-center">

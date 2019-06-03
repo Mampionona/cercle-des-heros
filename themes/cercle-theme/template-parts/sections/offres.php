@@ -15,7 +15,7 @@
       <div class="container">
         <div class="row">
           <?php foreach ($offres as $offre) : ?>
-            <div class="col-6 offre-item">
+            <div class="col-lg-6 offre-item">
               <h4 class="name"><?php echo $offre['title']; ?></h4>
               <p class="subtitle text-primary"><?php echo $offre['subtitle']; ?></p>
               <figure>
