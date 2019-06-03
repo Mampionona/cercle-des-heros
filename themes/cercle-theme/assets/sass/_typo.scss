@@ -7,6 +7,17 @@ body {
   line-height: 23px;
 }
 
+h1,
+.h1 {
+  color: $secondary;
+  font: {
+    family: 'Trirong', sans-serif;
+    size: 75px;
+    weight: 700;
+  }
+  line-height: 93px;
+}
+
 h2,
 .h2 {
   font: {
@@ -26,4 +37,10 @@ h3,
     weight: 700;
   }
   line-height: 93px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23px;
 }

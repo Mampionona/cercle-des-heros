@@ -22,10 +22,13 @@ a {
   padding: 394px 0 109px;
 
   h1 {
+    color: $white;
     font: {
       size: 20px;
       weight: 500;
+      family: 'Montserrat', sans-serif;
     }
+    line-height: inherit;
     text-transform: uppercase;
   }
 
