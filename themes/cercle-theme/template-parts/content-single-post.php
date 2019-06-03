@@ -1,5 +1,13 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
+    <div class="post-thumbnail">
+      <?php
+        if (has_post_thumbnail())
+          the_post_thumbnail('blog-large', array('class' => 'img-fluid'));
+        else
+          echo '<img src="' . asset_path('images/placeholder-1920x1200.jpg') . '" class="img-fluid" alt>';
+      ?>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col">

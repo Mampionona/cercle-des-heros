@@ -124,6 +124,7 @@ function wpdocs_theme_setup() {
   add_image_size('equipe-thumb', 386, 423, true);
   add_image_size('expert-thumb', 675, 807, true);
   add_image_size('blog-thumb', 1088, 400, true);
+  add_image_size('blog-large', 1920, 1200, true);
 }
 
 function excerptMore() {

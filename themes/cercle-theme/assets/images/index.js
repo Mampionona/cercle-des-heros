@@ -12,3 +12,4 @@ import './scroll-down.png';
 import './prev.png';
 import './next.png';
 import './placeholder.jpg';
+import './placeholder-1920x1200.jpg';

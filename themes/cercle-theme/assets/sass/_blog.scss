@@ -75,3 +75,33 @@
     }
   }
 }
+
+.single.internal-pages {
+  .site-header {
+    background-color: transparent;
+    position: absolute;
+
+  }
+
+  &.menu-open {
+    .site-header {
+      background-color: $secondary;
+      position: fixed;
+    }
+  }
+
+  .post-thumbnail {
+    margin-bottom: 100px;
+
+    &::before {
+      background: linear-gradient(to bottom, rgba($secondary, .25), transparent);
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
