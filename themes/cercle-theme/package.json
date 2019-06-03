@@ -29,6 +29,7 @@
     "build": "encore production --progress"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.3.0"
+    "@glidejs/glide": "^3.3.0",
+    "hamburgers": "^1.1.3"
   }
 }

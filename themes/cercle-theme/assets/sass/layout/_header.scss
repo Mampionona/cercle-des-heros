@@ -86,3 +86,16 @@
     }
   }
 }
+
+.hamburger--elastic.is-active .hamburger-inner:after,
+.hamburger--elastic.is-active .hamburger-inner {
+  background-color: $primary;
+}
+
+.hamburger--elastic.is-active .hamburger-inner:after {
+  transform: translate3d(0, -20px, 0) rotate(-286deg);
+}
+
+.hamburger--elastic.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(143deg);
+}

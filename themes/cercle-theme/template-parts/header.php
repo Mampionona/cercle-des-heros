@@ -4,7 +4,12 @@
 		<div class="container-fluid">
 			<div class="row align-items-center">
 				<div class="col">
-					<button class="menu-toggler pl-0" id="navbar-toggler"></button>
+					<!-- <button class="menu-toggler pl-0" id="navbar-toggler"></button> -->
+					<div class="hamburger hamburger--elastic js-hamburger" id="navbar-toggler">
+		        <div class="hamburger-box">
+		          <div class="hamburger-inner"></div>
+		        </div>
+		      </div>
 				</div>
 				<div class="col-auto">
 					<div class="logo">
