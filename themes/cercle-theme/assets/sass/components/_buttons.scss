@@ -1,0 +1,30 @@
+.btn {
+  border-radius: 32px;
+  font: {
+    size: 20px;
+    style: italic;
+    weight: 500;
+  }
+  padding: 16px 35px;
+
+  &:focus,
+  &.focus {
+    box-shadow: none;
+  }
+
+  &.btn-outline {
+    border: 3px solid $white;
+    padding-bottom: 14px;
+    padding-top: 14px;
+  }
+
+  &.btn-secondary {
+    box-shadow: 4.086px 8.019px 7px 0px rgba(222, 222, 222, 0.9);
+  }
+}
+
+button {
+  &:focus {
+    outline: 0;
+  }
+}

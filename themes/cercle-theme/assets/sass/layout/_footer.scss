@@ -1,0 +1,65 @@
+.site-footer {
+  background-color: $secondary;
+  color: $white;
+  margin-top: 118px;
+  padding-bottom: 147px;
+  padding-top: 116px;
+
+  a {
+    color: $white;
+  }
+
+  a,
+  .title {
+    font-weight: 700;
+  }
+
+  &,
+  .title {
+    font-size: 17px;
+  }
+
+  address {
+    line-height: 18px;
+    margin-left: 66px;
+    margin-top: 45px;
+
+    a {
+      font-weight: 500;
+    }
+  }
+
+  ul {
+    @include list-unstyled;
+  }
+}
+
+.footer-menu {
+  margin-top: 45px;
+
+  li {
+    line-height: 18px;
+
+    &:not(:first-of-type) {
+      margin-top: 14px;
+    }
+  }
+}
+
+.social-icons {
+  margin-top: 27px;
+
+  .title {
+    margin-bottom: 26px;
+  }
+
+  ul {
+    margin-bottom: 54px;
+  }
+
+  li {
+    &:not(:first-of-type) {
+      margin-left: 8px;
+    }
+  }
+}

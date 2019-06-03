@@ -1,0 +1,29 @@
+body {
+  color: $secondary;
+  font: {
+    family: 'Montserrat', sans-serif;
+    size: 18px;
+  }
+  line-height: 23px;
+}
+
+h2,
+.h2 {
+  font: {
+    size: 30px;
+    weight: 700;
+  }
+  text-transform: uppercase;
+}
+
+h3,
+.h3 {
+  color: $secondary;
+  font: {
+    family: 'Trirong', serif;
+    size: 75px;
+    style: italic;
+    weight: 700;
+  }
+  line-height: 93px;
+}

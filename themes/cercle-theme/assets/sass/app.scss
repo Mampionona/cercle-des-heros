@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Trirong&display=swap');
-// font-family: 'Trirong', serif;
-// font-family: 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,500i,600,700,800|Trirong:700i&display=swap');
 
+@import "~@glidejs/glide/src/assets/sass/glide.core";
+@import "~@glidejs/glide/src/assets/sass/glide.theme";
+@import 'variables';
+@import '~hamburgers/_sass/hamburgers/hamburgers';
 @import '~bootstrap/scss/bootstrap';
+@import 'typo';
+@import 'components/buttons';
+@import 'global';
+@import 'sections';
+@import 'layout/header';
+@import 'layout/footer';

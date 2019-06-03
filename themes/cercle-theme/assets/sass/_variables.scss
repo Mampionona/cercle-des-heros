@@ -1,0 +1,21 @@
+$primary: #e23f52;
+$secondary: #0f123d;
+$white: #fff;
+
+$grid-gutter-width: 30px;
+$content-width: 1088px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: $content-width
+) !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1118px
+) !default;
+$offres-gutter-width: 56px;
+$hamburger-layer-color: $white;

@@ -9,6 +9,7 @@ if ( ! defined('ABSPATH') ) {
 }
 
 require_once get_template_directory() . '/includes/assets.php';
+require_once get_template_directory() . '/includes/customizer.php';
 require_once get_template_directory() . '/includes/nav-walker.php';
 
 /*
@@ -23,7 +24,10 @@ if ( ! function_exists('hello_elementor_setup')) {
 
 		$hook_result = apply_filters_deprecated('elementor_hello_theme_register_menus', [true], '2.0', 'hello_elementor_register_menus');
 		if (apply_filters('hello_elementor_register_menus', $hook_result)) {
-			register_nav_menus(array('primary' => __('Primary', 'cercle-des-heros')));
+			register_nav_menus(array(
+				'primary' => __('Primary', 'cercle-des-heros'),
+				'footer' => __('Footer', 'cercle-des-heros')
+			));
 		}
 
 		$hook_result = apply_filters_deprecated('elementor_hello_theme_add_theme_support', [true], '2.0', 'hello_elementor_add_theme_support');
@@ -97,3 +101,27 @@ function setupOnePage($current_page_id) {
 }
 
 add_filter('one_page', 'setupOnePage');
+
+// Register sidebars
+function widgets_init() {
+  register_sidebar(array(
+		'name'          => __('Footer', 'cercle-des-heros'),
+    'id'            => 'sidebar-footer',
+    'before_widget' => '<section class="col col-xs-12 footer-menu widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h4 class="widget-title">',
+    'after_title'   => '</h4>'
+	));
+}
+
+add_action('widgets_init', 'widgets_init');
+
+add_action('after_setup_theme', 'wpdocs_theme_setup');
+function wpdocs_theme_setup() {
+  // add_image_size( 'category-thumb', 300 );
+  add_image_size('vision-thumb', 2242, 732, true);
+  add_image_size('expertise-thumb', 2242, 682, true);
+  add_image_size('offre-thumb', 517, 285, true);
+  add_image_size('equipe-thumb', 386, 423, true);
+  add_image_size('expert-thumb', 675, 807, true);
+}

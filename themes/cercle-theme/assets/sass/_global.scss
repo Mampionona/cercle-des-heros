@@ -1,0 +1,50 @@
+.menu-open {
+  overflow: hidden;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.text--white {
+  color: $white;
+}
+
+.first-section {
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+  color: $white;
+  padding: 394px 0 109px;
+
+  h1 {
+    font: {
+      size: 20px;
+      weight: 500;
+    }
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font: {
+      family: 'Trirong', sans-serif;
+      size: 90px;
+      style: italic;
+      weight: 700;
+    }
+    margin-top: 103px;
+    text-transform: none;
+  }
+
+  .buttons {
+    margin-top: 161px;
+  }
+}
+
+.scroll-down-wrap {
+  margin-top: 70px;
+}
