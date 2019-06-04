@@ -16,6 +16,16 @@ h1,
     weight: 700;
   }
   line-height: 93px;
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: 75px * .75;
+    line-height: 93px * .75;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 75px * .4;
+    line-height: 93px * .4;
+  }
 }
 
 h2,
@@ -26,8 +36,12 @@ h2,
   }
   text-transform: uppercase;
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-between(lg, xl) {
     font-size: 30px * .75;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 30px * .6;
   }
 }
 
@@ -42,9 +56,14 @@ h3,
   }
   line-height: 93px;
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-between(lg, xl) {
     font-size: 75px * .75;
     line-height: 93px * .75;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 75px * .45;
+    line-height: 93px * .45;
   }
 }
 
@@ -54,7 +73,7 @@ p {
   line-height: 23px;
 
   @include media-breakpoint-down(xl) {
-    font-size: 18px * .9;
+    font-size: 16px;
     line-height: 23px * .9;
   }
 }

@@ -13,7 +13,9 @@ import './core';
         type: 'carousel',
         perView: 5,
         gap: 0,
+        focusAt: 'center',
         breakpoints: {
+          1199: { perView: 3 },
           991: { perView: 2 },
           386: { perView: 1 }
         }

@@ -11,13 +11,13 @@
 		        </div>
 		      </div>
 				</div>
-				<div class="col-auto">
+				<div class="col text-center">
 					<div class="logo">
 						<?php the_custom_logo(); ?>
 					</div>
 				</div>
 				<div class="col">
-					<ul class="language-switcher list-unstyled d-flex justify-content-end"><?php pll_the_languages();?></ul>
+					<ul class="language-switcher list-unstyled d-flex justify-content-end mb-0"><?php pll_the_languages();?></ul>
 				</div>
 			</div>
 		</div>

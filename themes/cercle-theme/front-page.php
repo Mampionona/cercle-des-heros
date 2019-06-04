@@ -5,7 +5,7 @@ get_header();
 $query = apply_filters('one_page', get_option('page_on_front'));
 ?>
 
-<div class="sections">
+<div class="sections overflow-hidden">
   <?php while (have_posts()) : ?>
     <?php the_post(); ?>
     <?php $backgroundImage = get_field('background_image'); ?>

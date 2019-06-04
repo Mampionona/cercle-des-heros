@@ -38,7 +38,7 @@
     }
   }
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-between(lg, xl) {
     &,
     .title {
       font-size: 17px * .8;

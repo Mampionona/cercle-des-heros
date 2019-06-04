@@ -60,8 +60,12 @@
       color: $primary;
     }
 
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-between(lg, xl) {
       font-size: 20px * .8;
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
     }
   }
 
@@ -138,9 +142,14 @@
 .brand,
 .custom-logo-link {
   img {
-    @include media-breakpoint-down(xl) {
-      height: auto;
+    height: auto;
+
+    @include media-breakpoint-between(lg, xl) {
       max-width: 90px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      max-width: 50px;
     }
   }
 }

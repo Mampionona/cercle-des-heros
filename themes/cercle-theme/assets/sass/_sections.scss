@@ -26,7 +26,6 @@
   }
 
   &.section--champions {
-    padding-top: 244px;
     position: relative;
 
     .section-title {
@@ -40,9 +39,21 @@
         repeat: no-repeat;
         size: cover;
       }
-      height: 1081px;
-      left: 0;
-      top: 0;
+      padding-top: 244px;
+      position: relative;
+
+      @include media-breakpoint-up(lg) {
+        &::before {
+          background-color: $white;
+          bottom: -1px;
+          content: '';
+          display: block;
+          height: 175px;
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
+      }
     }
 
     .glide__arrow {
@@ -50,9 +61,19 @@
       top: inherit;
     }
 
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-between(lg, xl) {
       .bg {
-        height: 1081px - 174px;
+        padding-top: 196px * .75;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      .bg {
+        padding-top: 196px * .4;
+      }
+
+      .section-title {
+        margin-bottom: 88px * .4;
       }
     }
   }
@@ -83,7 +104,7 @@
       left: 0;
     }
 
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-between(lg, xl) {
       .line {
         top: 13px;
       }
@@ -99,9 +120,14 @@
       font-weight: 600;
       line-height: 40px;
 
-      @include media-breakpoint-down(xl) {
+      @include media-breakpoint-between(lg, xl) {
         font-size: 30px * .75;
         line-height: 40px * .75;
+      }
+
+      @include media-breakpoint-down(lg) {
+        font-size: 30px * .6;
+        line-height: 40px * .6;
       }
     }
   }
@@ -110,17 +136,30 @@
     margin-top: 143px;
   }
 
-  @include media-breakpoint-down(xl) {
-    &.section--vision,
-    &.section--equipe,
-    &.section--champions,
-    &.section--expertise,
-    &.section--offres {
+  &.section--vision,
+  &.section--equipe,
+  &.section--expertise,
+  &.section--offres {
+    @include media-breakpoint-between(lg, xl) {
       padding-top: 196px * .75;
 
       .section-title {
         margin-bottom: 88px * .75;
       }
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 196px * .4;
+
+      .section-title {
+        margin-bottom: 88px * .4;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .equipe {
+      margin-top: 143px * .4;
     }
   }
 }
@@ -149,12 +188,15 @@
     height: 165px;
     margin-bottom: 50px;
     width: 165px;
+
+    img {
+      height: auto;
+    }
   }
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-between(lg, xl) {
     .icon {
       img {
-        height: auto;
         max-width: 65%;
       }
     }
@@ -162,6 +204,27 @@
     .icons {
       padding-bottom: 202px * .6;
       padding-top: 200px * .6;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .icon {
+      margin-bottom: 30px;
+
+      img {
+        max-width: 40%;
+      }
+    }
+
+    .icons {
+      padding-bottom: 202px * .4;
+      padding-top: 200px * .4;
+    }
+
+    .icon-item {
+      &:not(:first-of-type) {
+        margin-top: 60px;
+      }
     }
   }
 }
@@ -199,12 +262,14 @@
       transform: translateY(0);
     }
 
-    img {
-      transform: scale(1.1);
+    @include media-breakpoint-up(md) {
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-between(lg, xl) {
     .name {
       font-size: 30px * .75;
       line-height: 40px * .75;
@@ -219,6 +284,21 @@
 
     .text {
       padding-left: 60px * .75;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .text {
+      padding: 0 15px;
+    }
+
+    .name {
+      margin-bottom: 32px * .4;
+      margin-top: 65px * .4;
+    }
+
+    .about {
+      font-size: 16px;
     }
   }
 }
@@ -247,6 +327,16 @@
     @include make-col-ready($offres-gutter-width);
     padding-bottom: 64px;
   }
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 146px * .4;
+
+    .offre-item {
+      &:not(:first-of-type) {
+        margin-top: 60px;
+      }
+    }
+  }
 }
 
 .offre-item {
@@ -269,6 +359,13 @@
   .description {
     font-weight: 500;
     margin-bottom: 56px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    .name {
+      font-size: 40px * .75;
+      line-height: 50px * .75;
+    }
   }
 }
 
@@ -306,13 +403,24 @@
         top: 4px;
         width: 100%;
         z-index: -1;
+
+        @include media-breakpoint-down(lg) {
+          top: 0;
+        }
       }
     }
 
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-between(lg, xl) {
       ul {
         font-size: 25px * .75;
         line-height: 47px * .75;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      ul {
+        font-size: 16px;
+        line-height: 1.5;
       }
     }
   }
@@ -342,13 +450,23 @@
     margin-top: 53px;
   }
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-between(lg, xl) {
     p {
       font-size: 20px * .8;
     }
 
     .content {
       padding-bottom: 337px * .75;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    p {
+      font-size: 16px;
+    }
+
+    .content {
+      padding-bottom: 337px * .6;
     }
   }
 }
@@ -405,7 +523,7 @@
     }
   }
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-between(lg, xl) {
     .name {
       font-size: 60px * .75;
       line-height: 65px * .75;
@@ -414,6 +532,18 @@
     .about {
       font-size: 25px * .75;
       line-height: 35px * .75;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .name {
+      font-size: 60px * .4;
+      line-height: 65px * .4;
+    }
+
+    .about {
+      font-size: 16px;
+      line-height: 1.5;
     }
   }
 }
