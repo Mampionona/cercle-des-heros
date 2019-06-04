@@ -1,25 +1,19 @@
 import ScrollToElement from 'scroll-to-element';
+import { STICKY_HEADER_HEIGHT } from '../config';
 
 (function (w, d, undefined) {
   d.addEventListener('DOMContentLoaded', () => {
-    // Handle navbar-toggler click
-    const toggler = d.getElementById('navbar-toggler');
-    toggler.addEventListener('click', () => {
-      toggler.classList.toggle('is-active');
-      d.body.classList.toggle('menu-open');
-    });
-
     // anchors
     const anchor = anchor => anchor.addEventListener('click', (e) => {
       const hash = anchor.hash;
       if (hash && anchor.pathname === w.location.pathname) {
         e.preventDefault();
-        toggler.classList.remove('is-active');
+        d.querySelectorAll('.hamburger').forEach(item => item.classList.remove('is-active'));
         d.body.classList.remove('menu-open');
         ScrollToElement(hash, {
           duration: 1500,
           ease: 'out-expo',
-          offset: 0
+          offset: - STICKY_HEADER_HEIGHT
         });
       }
     });

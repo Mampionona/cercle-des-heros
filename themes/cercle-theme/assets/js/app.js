@@ -1,6 +1,7 @@
 import './polyfill';
 import Glide from '@glidejs/glide';
 import ScrollToElement from 'scroll-to-element';
+import { STICKY_HEADER_HEIGHT } from './config';
 import '../images';
 import './core';
 
@@ -63,7 +64,7 @@ import './core';
       ScrollToElement(document.querySelectorAll('.section-item')[1], {
         duration: 1200,
         ease: 'out-expo',
-        offset: 0
+        offset: - STICKY_HEADER_HEIGHT
       });
     };
     if (d.querySelector('.section-item')) d.getElementById('scroll-down').addEventListener('click', scrollDown);
