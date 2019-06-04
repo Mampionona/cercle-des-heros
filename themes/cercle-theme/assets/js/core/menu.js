@@ -18,7 +18,7 @@ import ScrollToElement from 'scroll-to-element';
         d.body.classList.remove('menu-open');
         ScrollToElement(hash, {
           duration: 1500,
-          ease: 'out-quint',
+          ease: 'out-expo',
           offset: 0
         });
       }

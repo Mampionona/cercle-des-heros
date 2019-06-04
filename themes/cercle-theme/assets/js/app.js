@@ -1,5 +1,6 @@
 import './polyfill';
 import Glide from '@glidejs/glide';
+import ScrollToElement from 'scroll-to-element';
 import '../images';
 import './core';
 
@@ -54,5 +55,15 @@ import './core';
     const positionOfLine = () => d.querySelectorAll('.section-title').forEach(update);
     positionOfLine();
     w.addEventListener('resize', positionOfLine);
+
+    const scrollDown = (e) => {
+      e.preventDefault();
+      ScrollToElement(document.querySelectorAll('.section-item')[1], {
+        duration: 1200,
+        ease: 'out-expo',
+        offset: 0
+      });
+    };
+    if (d.querySelector('.section-item')) d.getElementById('scroll-down').addEventListener('click', scrollDown);
   });
 } (window, document));
