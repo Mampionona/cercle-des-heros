@@ -46,6 +46,19 @@ a {
   .buttons {
     margin-top: 161px;
   }
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 394px * .75;
+
+    h2 {
+      font-size: 90px * .75;
+      margin-top: 103px * .6;
+    }
+
+    .buttons {
+      margin-top: 161px * .6;
+    }
+  }
 }
 
 .scroll-down-wrap {

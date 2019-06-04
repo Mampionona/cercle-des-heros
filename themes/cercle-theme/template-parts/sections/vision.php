@@ -2,7 +2,7 @@
 $icons = get_post_meta($post->ID, 'icons', true);
 $backgroundImage = get_field('background_image');
 ?>
-
+<?php include(locate_template("template-parts/page-header.php", false, false)); ?>
 <div class="content--vision">
   <div class="content text-white" style="background-image: url(<?php echo $backgroundImage['url']; ?>)">
     <div class="container">

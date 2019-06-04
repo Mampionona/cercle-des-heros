@@ -1,5 +1,5 @@
 <?php $offres = get_post_meta($post->ID, 'offres', true); ?>
-
+<?php include(locate_template("template-parts/page-header.php", false, false)); ?>
 <div class="content--offres">
   <div class="content">
     <div class="container">

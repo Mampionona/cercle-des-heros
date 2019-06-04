@@ -1,5 +1,5 @@
 <?php $equipes = get_post_meta($post->ID, 'equipes', true); ?>
-
+<?php include(locate_template("template-parts/page-header.php", false, false)); ?>
 <div class="template--equipe">
   <div class="container">
     <div class="row">

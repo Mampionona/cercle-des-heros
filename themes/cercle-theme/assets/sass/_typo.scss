@@ -25,6 +25,10 @@ h2,
     weight: 700;
   }
   text-transform: uppercase;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 30px * .75;
+  }
 }
 
 h3,
@@ -37,10 +41,20 @@ h3,
     weight: 700;
   }
   line-height: 93px;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 75px * .75;
+    line-height: 93px * .75;
+  }
 }
 
 p {
   font-size: 18px;
   font-weight: 300;
   line-height: 23px;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 18px * .9;
+    line-height: 23px * .9;
+  }
 }

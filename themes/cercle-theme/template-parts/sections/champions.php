@@ -1,5 +1,6 @@
 <?php $experts = get_post_meta($post->ID, 'experts', true); ?>
 
+<?php include(locate_template("template-parts/page-header.php", false, false)); ?>
 <div class="section---champions">
   <div class="container">
     <div class="row">
@@ -8,13 +9,13 @@
           <div class="expert">
             <div class="expert-slider glide">
               <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
+                <ul class="glide__slides mb-0">
                   <?php foreach ($experts as $expert) : ?>
                     <li class="glide__slide">
                       <div class="expert-item">
                         <div class="row flex-lg-row-reverse">
                           <div class="col-photo photo">
-                            <figure>
+                            <figure class="mb-0">
                               <?php echo wp_get_attachment_image($expert['expert_photo'], 'expert-thumb', false, array('class' => 'img-fluid')); ?>
                             </figure>
                           </div>
@@ -30,7 +31,7 @@
                   <?php endforeach; ?>
                 </ul>
               </div>
-              <div class="glide__arrows" data-glide-el="controls">
+              <div class="glide__arrows d-none d-xl-block" data-glide-el="controls">
                 <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
                   <img src="<?php echo asset_path('images/prev.png'); ?>" alt="">
                 </button>

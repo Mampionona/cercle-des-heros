@@ -59,6 +59,10 @@
     .menu-open & {
       color: $primary;
     }
+
+    @include media-breakpoint-down(xl) {
+      font-size: 20px * .8;
+    }
   }
 
   li {
@@ -90,6 +94,24 @@
       margin-top: 156px;
     }
   }
+
+  @include media-breakpoint-down(xl) {
+    margin-top: 171px * .6;
+
+    a {
+      font-size: 20px * .75;
+    }
+
+    .menu-item {
+      &:not(:first-of-type) {
+        margin-top: 66px * .6;
+      }
+
+      &:last-of-type {
+        margin-top: 156px * .6;
+      }
+    }
+  }
 }
 
 .hamburger--slider.is-active .hamburger-inner {
@@ -110,5 +132,15 @@
   &::before,
   &::after {
     border-radius: 0;
+  }
+}
+
+.brand,
+.custom-logo-link {
+  img {
+    @include media-breakpoint-down(xl) {
+      height: auto;
+      max-width: 90px;
+    }
   }
 }

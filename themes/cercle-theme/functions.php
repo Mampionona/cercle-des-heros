@@ -107,7 +107,7 @@ function widgets_init() {
   register_sidebar(array(
 		'name'          => __('Footer', 'cercle-des-heros'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<section class="col col-xs-12 footer-menu widget %1$s %2$s">',
+    'before_widget' => '<section class="col-xl footer-menu widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h4 class="widget-title">',
     'after_title'   => '</h4>'

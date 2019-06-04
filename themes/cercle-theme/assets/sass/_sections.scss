@@ -44,6 +44,17 @@
       left: 0;
       top: 0;
     }
+
+    .glide__arrow {
+      bottom: 234px;
+      top: inherit;
+    }
+
+    @include media-breakpoint-down(xl) {
+      .bg {
+        height: 1081px - 174px;
+      }
+    }
   }
 
   &.section--expertise,
@@ -71,6 +82,12 @@
     @include media-breakpoint-up(xl) {
       left: 0;
     }
+
+    @include media-breakpoint-down(xl) {
+      .line {
+        top: 13px;
+      }
+    }
   }
 
   .wp-block-quote {
@@ -81,11 +98,30 @@
       font-size: 30px;
       font-weight: 600;
       line-height: 40px;
+
+      @include media-breakpoint-down(xl) {
+        font-size: 30px * .75;
+        line-height: 40px * .75;
+      }
     }
   }
 
   .equipe {
     margin-top: 143px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &.section--vision,
+    &.section--equipe,
+    &.section--champions,
+    &.section--expertise,
+    &.section--offres {
+      padding-top: 196px * .75;
+
+      .section-title {
+        margin-bottom: 88px * .75;
+      }
+    }
   }
 }
 
@@ -113,6 +149,20 @@
     height: 165px;
     margin-bottom: 50px;
     width: 165px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    .icon {
+      img {
+        height: auto;
+        max-width: 65%;
+      }
+    }
+
+    .icons {
+      padding-bottom: 202px * .6;
+      padding-top: 200px * .6;
+    }
   }
 }
 
@@ -151,6 +201,24 @@
 
     img {
       transform: scale(1.1);
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    .name {
+      font-size: 30px * .75;
+      line-height: 40px * .75;
+      margin-bottom: 32px * .75;
+      margin-top: 65px * .75;
+    }
+
+    .about {
+      font-size: 18px * .75;
+      line-height: 25px * .75;
+    }
+
+    .text {
+      padding-left: 60px * .75;
     }
   }
 }
@@ -240,6 +308,13 @@
         z-index: -1;
       }
     }
+
+    @include media-breakpoint-down(xl) {
+      ul {
+        font-size: 25px * .75;
+        line-height: 47px * .75;
+      }
+    }
   }
 
   .learn-more {
@@ -265,6 +340,16 @@
 
   .learn-more {
     margin-top: 53px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    p {
+      font-size: 20px * .8;
+    }
+
+    .content {
+      padding-bottom: 337px * .75;
+    }
   }
 }
 
@@ -319,6 +404,18 @@
       width: 100% - $col-photo-width;
     }
   }
+
+  @include media-breakpoint-down(xl) {
+    .name {
+      font-size: 60px * .75;
+      line-height: 65px * .75;
+    }
+
+    .about {
+      font-size: 25px * .75;
+      line-height: 35px * .75;
+    }
+  }
 }
 
 .section--champions {
@@ -334,13 +431,21 @@
     border: 0;
   }
 
-  @include media-breakpoint-up(xl) {
+  .glide__arrow--right {
+    right: -93px;
+  }
+
+  .glide__arrow--left {
+    left: -93px;
+  }
+
+  @media (max-width: 1280px) {
     .glide__arrow--right {
-      right: -93px;
+      right: 32px;
     }
 
     .glide__arrow--left {
-      left: -93px;
+      left: 32px;
     }
   }
 }

@@ -1,5 +1,5 @@
 <?php $backgroundImage = get_field('background_image'); ?>
-
+<?php include(locate_template("template-parts/page-header.php", false, false)); ?>
 <div class="content--expertise">
   <div class="content" style="background-image: url(<?php echo $backgroundImage['url']; ?>)">
     <div class="container">

@@ -21,6 +21,10 @@
   &.btn-secondary {
     box-shadow: 4.086px 8.019px 7px 0px rgba(222, 222, 222, 0.9);
   }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 20px * .75;
+  }
 }
 
 button {
