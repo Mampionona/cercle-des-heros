@@ -1,1 +1,1 @@
-export const STICKY_HEADER_HEIGHT = 79;
+export const STICKY_HEADER_HEIGHT = 77;
