@@ -23,7 +23,7 @@
               </figure>
               <p class="description"><?php echo $offre['offer_description']; ?></p>
               <div class="reserver">
-                <a href="#" class="btn btn-secondary"><?php _e('Réserver', 'cercle-des-heros'); ?></a>
+                <a href="#" class="btn btn-secondary"><?php _e('offre.reserver', 'cercle-des-heros'); ?></a>
               </div>
             </div>
           <?php endforeach; ?>

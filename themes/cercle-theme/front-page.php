@@ -13,7 +13,7 @@ $query = apply_filters('one_page', get_option('page_on_front'));
       <?php the_content(); ?>
       <div class="text-center buttons">
         <div>
-          <a href="#" class="btn btn-outline text--white"><?php _e('En savoir plus', 'cercle-des-heros'); ?></a>
+          <a href="#" class="btn btn-outline text--white"><?php _e('challenge.discover', 'cercle-des-heros'); ?></a>
         </div>
         <div class="scroll-down-wrap">
           <a href="#" id="scroll-down">
