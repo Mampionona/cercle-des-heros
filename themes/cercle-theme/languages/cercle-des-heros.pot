@@ -142,3 +142,7 @@ msgstr ""
 #: includes/customizer.php:49
 msgid "Téléphone"
 msgstr ""
+
+#: template-parts/404.php
+msgid "Revenir à l'accueil"
+msgstr ""

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Cercle des Héros\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-06 06:19+0000\n"
-"PO-Revision-Date: 2019-06-06 06:25+0000\n"
+"PO-Revision-Date: 2019-06-06 09:48+0000\n"
 "Last-Translator: devke03 <devke03@gmail.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -136,8 +136,12 @@ msgstr ""
 
 #: template-parts/404.php:13
 msgid "The page can&rsquo;t be found."
-msgstr ""
+msgstr "The page can&rsquo;t be found."
 
 #: includes/customizer.php:49
 msgid "Téléphone"
 msgstr ""
+
+#: template-parts/404.php
+msgid "Revenir à l'accueil"
+msgstr "Back to home"

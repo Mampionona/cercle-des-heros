@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Cercle des Héros\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-06 06:19+0000\n"
-"PO-Revision-Date: 2019-06-06 06:21+0000\n"
+"PO-Revision-Date: 2019-06-06 06:22+0000\n"
 "Last-Translator: devke03 <devke03@gmail.com>\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -98,7 +98,7 @@ msgstr "En savoir plus"
 
 #: functions.php:131
 msgid "Lire plus"
-msgstr ""
+msgstr "Lire plus"
 
 #. Author of the theme
 msgid "Mampionona"
