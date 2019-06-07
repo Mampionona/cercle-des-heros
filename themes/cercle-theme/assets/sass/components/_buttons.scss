@@ -16,10 +16,38 @@
     border: 3px solid $white;
     padding-bottom: 14px;
     padding-top: 14px;
+
+    &:hover {
+      background-color: $white;
+      color: $secondary;
+    }
   }
 
   &.btn-secondary {
     box-shadow: 4.086px 8.019px 7px 0px rgba(222, 222, 222, 0.9);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: 20px * .75;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+}
+
+.white-btn {
+  .btn {
+    background-color: $white;
+    box-shadow: 4.086px 8.019px 7px 0px rgba($secondary, 0.9);
+    border: 0;
+    color: $secondary;
+
+    &:hover {
+      background-color: darken($secondary, 5%);
+      color: $white;
+    }
   }
 }
 

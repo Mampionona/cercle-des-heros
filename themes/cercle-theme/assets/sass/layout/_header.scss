@@ -3,26 +3,22 @@
   padding-top: 66px;
   position: absolute;
   top: 0;
-
-  .container-fluid {
-    @media (min-width: 1400px) {
-      width: calc(100% - (140px * 2));
-    }
-  }
+  z-index: 9;
 }
 
-.menu-toggler {
-  background: url('../images/bars.png') no-repeat left center;
-  border: 0;
-  height: 24px;
-  outline: 0;
-  width: 34px;
+.internal-pages {
+  .site-header {
+    background-color: $secondary;
+    margin-bottom: 100px;
+    padding-bottom: 66px;
+    position: relative;
+  }
 }
 
 .menu-open {
   .site-header {
     background-color: $secondary;
-    height: 100%;
+    height: 100vh;
     left: 0;
     overflow-y: auto;
     position: fixed;
@@ -33,10 +29,6 @@
 
   .primary-menu {
     display: block;
-  }
-
-  .menu-toggler {
-    background-image: url('../images/close.png');
   }
 }
 
@@ -51,16 +43,39 @@
       weight: 700;
     }
 
+    .internal-pages & {
+      &,
+      a {
+        color: $white;
+      }
+    }
+
     .menu-open & {
       color: $primary;
     }
+
+    @include media-breakpoint-between(lg, xl) {
+      font-size: 20px * .8;
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
   }
 
-  li {
+  .lang-item {
+    color: $white;
+
     &:not(:first-of-type) {
       &::before {
         content: '/';
         margin: 0 4px;
+      }
+    }
+
+    &.current-lang {
+      a {
+        color: $white;
       }
     }
   }
@@ -85,6 +100,24 @@
       margin-top: 156px;
     }
   }
+
+  @include media-breakpoint-down(xl) {
+    margin-top: 171px * .6;
+
+    a {
+      font-size: 20px * .75;
+    }
+
+    .menu-item {
+      &:not(:first-of-type) {
+        margin-top: 66px * .6;
+      }
+
+      &:last-of-type {
+        margin-top: 156px * .6;
+      }
+    }
+  }
 }
 
 .hamburger--slider.is-active .hamburger-inner {
@@ -105,5 +138,60 @@
   &::before,
   &::after {
     border-radius: 0;
+  }
+}
+
+.brand,
+.custom-logo-link {
+  img {
+    height: auto;
+
+    @include media-breakpoint-between(lg, xl) {
+      max-width: 90px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      max-width: 50px;
+    }
+  }
+}
+
+.hamburger {
+  padding: 0;
+}
+
+.site-header,
+.sticky-header {
+  .container-fluid {
+    @include media-breakpoint-up(xxl) {
+      width: calc(100% - (140px * 2));
+    }
+  }
+}
+
+.sticky-header {
+  background-color: $secondary;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  transform: translateY(-20px);
+  transition: .4s;
+  width: 100%;
+  visibility: hidden;
+  z-index: 10;
+
+  .language-switcher {
+    a {
+      color: $primary;
+    }
+  }
+
+  .is-sticky:not(.menu-open) & {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
   }
 }

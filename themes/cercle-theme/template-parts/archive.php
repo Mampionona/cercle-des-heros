@@ -3,36 +3,32 @@
  * The template for displaying archive pages.
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+if (!defined('ABSPATH')) exit;
 ?>
 <main id="main" class="site-main" role="main">
-
-	<header class="page-header">
-		<?php the_archive_title( '<h1 class="entry-title">', '</h1>' ); ?>
-        <?php the_archive_description( '<p class="archive-description">', '</p>' ); ?>
-	</header>
-
-	<div class="page-content">
-		<?php
-		while ( have_posts() ) : the_post();
-			printf( '<h2><a href="%s">%s</a></h2>', esc_url( get_permalink() ), get_the_title() );
-			the_post_thumbnail();
-			the_excerpt();
-		endwhile;
-		?>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1 class="mb-5">Blog</h1>
+				<?php while (have_posts()) : the_post(); ?>
+				  <?php get_template_part('template-parts/content', get_post_type()); ?>
+				<?php endwhile; ?>
+				<?php
+				  $links = paginate_links(array(
+						'type' => 'array',
+				    'prev_next' => false
+					));
+				?>
+				<?php if ($links) : ?>
+				  <nav>
+				    <ul class="pagination justify-content-center">
+				      <?php foreach ($links as $link) : ?>
+				        <li class="page-item"><?php echo $link; ?></li>
+				      <?php endforeach; ?>
+				    </ul>
+				  </nav>
+				<?php endif; ?>
+			</div>
+		</div>
 	</div>
-
-	<div class="entry-links"><?php wp_link_pages(); ?></div>
-
-	<?php global $wp_query;
-	if ( $wp_query->max_num_pages > 1 ) : ?>
-		<nav id="nav-below" class="navigation" role="navigation">
-			<?php /* Translators: HTML arrow */ ?>
-            <div class="nav-previous"><?php next_posts_link( sprintf( __( '%s older', 'cercle-des-heros' ), '<span class="meta-nav">&larr;</span>' ) ); ?></div>
-			<?php /* Translators: HTML arrow */ ?>
-            <div class="nav-next"><?php previous_posts_link( sprintf( __( 'newer %s', 'cercle-des-heros' ), '<span class="meta-nav">&rarr;</span>' ) ); ?></div>
-		</nav>
-	<?php endif; ?>
 </main>

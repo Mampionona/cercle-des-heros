@@ -13,7 +13,7 @@ $icons = array(
 <div class="col col-xs-12">
   <div class="social-icons">
     <h4 class="title"><?php _e('Follow us', 'cercle-des-heros'); ?></h4>
-    <ul class="pl-0 list-unstyled d-flex">
+    <ul class="pl-0 list-unstyled d-flex justify-content-center justify-content-xl-start">
       <?php foreach ($icons as $icon): ?>
         <?php $link = get_theme_mod($icon); ?>
         <?php if (!$link) continue; ?>

@@ -7,6 +7,27 @@ body {
   line-height: 23px;
 }
 
+h1,
+.h1 {
+  color: $secondary;
+  font: {
+    family: 'Trirong', sans-serif;
+    size: 75px;
+    weight: 700;
+  }
+  line-height: 93px;
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: 75px * .75;
+    line-height: 93px * .75;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 75px * .4;
+    line-height: 93px * .4;
+  }
+}
+
 h2,
 .h2 {
   font: {
@@ -14,6 +35,14 @@ h2,
     weight: 700;
   }
   text-transform: uppercase;
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: 30px * .75;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 30px * .6;
+  }
 }
 
 h3,
@@ -26,4 +55,25 @@ h3,
     weight: 700;
   }
   line-height: 93px;
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: 75px * .75;
+    line-height: 93px * .75;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 75px * .45;
+    line-height: 93px * .45;
+  }
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23px;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 16px;
+    line-height: 23px * .9;
+  }
 }

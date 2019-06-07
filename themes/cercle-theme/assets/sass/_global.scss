@@ -22,10 +22,13 @@ a {
   padding: 394px 0 109px;
 
   h1 {
+    color: $white;
     font: {
       size: 20px;
       weight: 500;
+      family: 'Montserrat', sans-serif;
     }
+    line-height: inherit;
     text-transform: uppercase;
   }
 
@@ -42,6 +45,25 @@ a {
 
   .buttons {
     margin-top: 161px;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    padding-top: 394px * .75;
+
+    h2 {
+      font-size: 90px * .75;
+      margin-top: 103px * .6;
+    }
+
+    .buttons {
+      margin-top: 161px * .6;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    h2 {
+      font-size: 90px * .4;
+    }
   }
 }
 

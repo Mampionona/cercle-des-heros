@@ -4,20 +4,15 @@
 		<div class="container-fluid">
 			<div class="row align-items-center">
 				<div class="col">
-					<!-- <button class="menu-toggler pl-0" id="navbar-toggler"></button> -->
-					<div class="hamburger hamburger--slider js-hamburger" id="navbar-toggler">
-		        <div class="hamburger-box">
-		          <div class="hamburger-inner"></div>
-		        </div>
-		      </div>
+					<?php get_template_part('template-parts/partials/hamburger'); ?>
 				</div>
-				<div class="col-auto">
+				<div class="col text-center">
 					<div class="logo">
 						<?php the_custom_logo(); ?>
 					</div>
 				</div>
 				<div class="col">
-					<ul class="language-switcher list-unstyled d-flex justify-content-end"><?php pll_the_languages();?></ul>
+					<?php get_template_part('template-parts/partials/switcher'); ?>
 				</div>
 			</div>
 		</div>
@@ -30,3 +25,22 @@
 		</nav>
 	</div>
 </header>
+<div class="sticky-header" id="sticky-header">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col">
+				<?php get_template_part('template-parts/partials/hamburger'); ?>
+			</div>
+			<div class="col text-center">
+				<div class="logo">
+					<a href="<?php echo esc_url(home_url('/')); ?>">
+						<img src="<?php echo asset_path('images/sticky-logo.png'); ?>" alt="<?php bloginfo('name'); ?>">
+					</a>
+				</div>
+			</div>
+			<div class="col">
+				<?php get_template_part('template-parts/partials/switcher'); ?>
+			</div>
+		</div>
+	</div>
+</div>

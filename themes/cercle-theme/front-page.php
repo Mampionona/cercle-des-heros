@@ -5,7 +5,7 @@ get_header();
 $query = apply_filters('one_page', get_option('page_on_front'));
 ?>
 
-<div class="sections">
+<div class="sections overflow-hidden">
   <?php while (have_posts()) : ?>
     <?php the_post(); ?>
     <?php $backgroundImage = get_field('background_image'); ?>
@@ -13,10 +13,10 @@ $query = apply_filters('one_page', get_option('page_on_front'));
       <?php the_content(); ?>
       <div class="text-center buttons">
         <div>
-          <a href="#" class="btn btn-outline text--white"><?php _e('En savoir plus', 'cercle-des-heros'); ?></a>
+          <a href="#" class="btn btn-outline text--white scroll-down"><?php _e('challenge.discover', 'cercle-des-heros'); ?></a>
         </div>
         <div class="scroll-down-wrap">
-          <a href="#" id="scroll-down">
+          <a href="#" class="scroll-down">
             <img src="<?php echo asset_path('images/scroll-down.png'); ?>" alt="<?php _e('Scroll down', 'cercle-des-heros'); ?>">
           </a>
         </div>

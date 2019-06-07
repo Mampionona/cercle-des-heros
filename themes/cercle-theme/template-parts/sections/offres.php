@@ -1,5 +1,5 @@
 <?php $offres = get_post_meta($post->ID, 'offres', true); ?>
-
+<?php include(locate_template("template-parts/page-header.php", false, false)); ?>
 <div class="content--offres">
   <div class="content">
     <div class="container">
@@ -23,7 +23,7 @@
               </figure>
               <p class="description"><?php echo $offre['offer_description']; ?></p>
               <div class="reserver">
-                <a href="#" class="btn btn-secondary"><?php _e('Réserver', 'cercle-des-heros'); ?></a>
+                <a href="#" class="btn btn-secondary"><?php _e('offre.reserver', 'cercle-des-heros'); ?></a>
               </div>
             </div>
           <?php endforeach; ?>

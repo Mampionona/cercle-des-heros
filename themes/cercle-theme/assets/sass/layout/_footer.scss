@@ -21,7 +21,6 @@
 
   address {
     line-height: 18px;
-    margin-left: 66px;
     margin-top: 45px;
 
     a {
@@ -31,6 +30,19 @@
 
   ul {
     @include list-unstyled;
+  }
+
+  @include media-breakpoint-up(xl) {
+    address {
+      margin-left: 66px;
+    }
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    &,
+    .title {
+      font-size: 17px * .8;
+    }
   }
 }
 

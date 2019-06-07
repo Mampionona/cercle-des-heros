@@ -107,7 +107,7 @@ function widgets_init() {
   register_sidebar(array(
 		'name'          => __('Footer', 'cercle-des-heros'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<section class="col col-xs-12 footer-menu widget %1$s %2$s">',
+    'before_widget' => '<section class="col-xl footer-menu widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h4 class="widget-title">',
     'after_title'   => '</h4>'
@@ -118,10 +118,26 @@ add_action('widgets_init', 'widgets_init');
 
 add_action('after_setup_theme', 'wpdocs_theme_setup');
 function wpdocs_theme_setup() {
-  // add_image_size( 'category-thumb', 300 );
   add_image_size('vision-thumb', 2242, 732, true);
   add_image_size('expertise-thumb', 2242, 682, true);
-  add_image_size('offre-thumb', 517, 285, true);
+  add_image_size('offre-thumb', 690, 380, true);
   add_image_size('equipe-thumb', 386, 423, true);
   add_image_size('expert-thumb', 675, 807, true);
+  add_image_size('blog-thumb', 1088, 400, true);
+  add_image_size('blog-large', 1920, 1200, true);
 }
+
+function excerptMore() {
+  return ' &hellip; <a href="' . get_permalink() . '">' . __('Lire plus', 'cercle-des-heros') . '</a>';
+}
+
+add_filter('excerpt_more', 'excerptMore');
+
+function bodyClass($classes) {
+  if (!is_front_page()) {
+		$classes[] = 'internal-pages';
+	}
+  return $classes;
+}
+
+add_filter('body_class', 'bodyClass');
