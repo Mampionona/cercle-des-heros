@@ -67,6 +67,7 @@ import './core';
         offset: - STICKY_HEADER_HEIGHT
       });
     };
-    if (d.querySelector('.section-item')) d.getElementById('scroll-down').addEventListener('click', scrollDown);
+    const scrollDownElements = button => button.addEventListener('click', scrollDown);
+    if (d.querySelector('.section-item')) d.querySelectorAll('.scroll-down').forEach(scrollDownElements);
   });
 } (window, document));
