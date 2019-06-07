@@ -3,7 +3,6 @@
     background: {
       position: right bottom;
       repeat: no-repeat;
-      size: percentage(1086 / 1920);
     }
   }
 
@@ -12,7 +11,21 @@
     padding-top: 176px;
 
     .content {
-      background-size: percentage(1383 / 1920);
+      background-size: contain;
+    }
+  }
+
+  &.section--expertise {
+    .content {
+      background-size: 42%;
+
+      // @include media-breakpoint-up(xl) {
+      //   background-size: 40%;
+      // }
+      //
+      // @include media-breakpoint-down(xl) {
+      //   background-size: 50%;
+      // }
     }
   }
 
@@ -160,6 +173,10 @@
   @include media-breakpoint-down(lg) {
     .equipe {
       margin-top: 143px * .4;
+    }
+
+    h3 br {
+      display: none;
     }
   }
 }
@@ -333,6 +350,14 @@
   @include media-breakpoint-down(lg) {
     margin-top: 146px * .4;
 
+    // .offre-item {
+    //   &:not(:first-of-type) {
+    //     margin-top: 60px;
+    //   }
+    // }
+  }
+
+  @include media-breakpoint-down(md) {
     .offre-item {
       &:not(:first-of-type) {
         margin-top: 60px;
@@ -423,6 +448,18 @@
       ul {
         font-size: 16px;
         line-height: 1.5;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      li {
+        &:not(:first-of-type) {
+          margin-top: 5px;
+        }
+
+        .bg {
+          display: inline-block;
+        }
       }
     }
   }
@@ -597,5 +634,21 @@
     padding: 0 28px;
     position: absolute;
     width: 100%;
+  }
+}
+
+.post-thumbnail {
+  img {
+    width: 100%;
+  }
+}
+
+.scroll-down-wrap {
+  .scroll-down {
+    transition: .2s;
+
+    &:hover {
+      opacity: .6;
+    }
   }
 }
